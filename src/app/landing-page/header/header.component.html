@@ -1,0 +1,106 @@
+<!--==========================
+Header
+============================-->
+<header id="header">
+  <div class="container">
+    <div id="logo" class="pull-left">
+      <!-- <h1><a href="#intro" class="scrollto"></a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="#intro"><img src="../assets/img/logo-coral.svg" alt="" title="" width="110" height="32"></a>
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+          <li class="menu-has-children"><a href="">Categories</a>
+            <ul>
+              <li><a href="#">Development</a></li>
+              <li class="menu-has-children"><a href="#">Business</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Finance & Accounting</a></li>
+              <li><a href="#">IT & Software</a></li>
+              <li><a href="#">Office Productivity</a></li>
+              <li><a href="#">Personal Development</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Lifestyle</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Health & Fitness</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Teaching & Academics</a></li>
+            </ul>
+          </li>
+        <li class="menu-active"><a href="#about">About Us</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a class="btn" (click)="showDialog = !showDialog">Log In</a></li>
+        <li><a class="btn" (click)="showSignUpDialog= !showSignupDialog">Sign Up</a></li>
+      </ul>
+    </nav><!-- #nav-menu-container -->
+    <!-- Default form login -->
+  <app-login-dialog [(visible)]="showDialog">
+    <form class="text-center border border-light p-5">
+        <p class="h4 mb-4">Log In to Your Udemy Account!</p>
+        <!-- Email -->
+        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+        <!-- Password -->
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+        <div class="d-flex justify-content-around">
+            <div>
+                <!-- Remember me -->
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                </div>
+            </div>
+            <div>
+                <!-- Forgot password -->
+                <a href="">Forgot password?</a>
+            </div>
+        </div>
+        <!-- Sign in button -->
+        <button class="btn btn-info btn-block my-4" type="submit" routerLink="/student">Sign in</button>
+    
+        <!-- Register -->
+        <p>Not a member?
+            <a routerLink="/student">Register</a>
+        </p>  
+    </form>
+    </app-login-dialog>
+
+
+  <app-login-dialog [(visible)]="showSignUpDialog">
+       <!-- Default form register -->
+  <form class="text-center border border-light p-5">
+  
+      <p class="h4 mb-4">Sign up</p>
+  
+      <div class="form-row mb-4">
+          <div class="col">
+              <!-- Full name -->
+              <input type="text" id="defaultRegisterFormFullName" class="form-control" placeholder="Full Name">
+          </div>
+      </div>
+  
+      <!-- E-mail -->
+      <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+  
+      <!-- Password -->
+      <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+      <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          At least 8 characters and 1 digit
+      </small>
+  
+      <!-- Sign up button -->
+      <button class="btn btn-info my-4 btn-block" type="submit" routerLink="/student">Sign Up</button>
+      <hr>
+      <!-- Terms of service -->
+      <p>By clicking
+          <em>Sign up</em> you agree to our
+          <a href="" target="_blank">terms of service</a>
+  </form>
+  <!-- Default form register -->
+  </app-login-dialog>
+  </div>
+</header><!-- #header -->

@@ -1,0 +1,48 @@
+
+<br/><br/><br/>
+<h2> &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;<b> Choose What to learn next </b></h2>
+<br /><br />
+<div class="container">
+    <div>
+    <div class="row" >
+        <div class="col-md-3 col-sm-4 col-xs-6"  *ngFor="let course of courses">  
+            <div>
+                <br/>
+                <div data-courseid="2379320" data-ps="74" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa">
+                    <div data-purpose="quick-view-box-wrapper">
+                        <a class="merchandising-course-card--mask--2-b-d">
+                            <div class="merchandising-course-card--card-header--89z8L">
+                                <img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="{{course.photo}}">
+                            </div>
+                            <div class="merchandising-course-card--card-body--3OpAH">
+                                <div>
+                                    <a href="/speed-efficiency-and-productivity-in-adobe-illustrator/" data-purpose="merchandising-course-card-body-2379320" target="_self"><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">{{course.title}}</div>
+                                    <span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">{{course.author}}</span></a>
+                                </div>
+                                <div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper">
+                                    <div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container">
+                                        <button class="btn btn-lg btn-primary add-cart" type="button" (click)="addCart(course.id); showDialog = !showDialog">Add to Cart</button>
+                                        <div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text">
+                                            <span class="sr-only">Current price</span>
+                                            <span><span>{{course.price}}</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             </a>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+            <app-dialog [(visible)]="showDialog">
+                    <h3 class="dialog-head"><i class="fa fa-check-circle" style="font-size:20px;color:rgb(34, 165, 34)"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{title}}</h3>
+                    <button (click)="showCart()" class="btn dialog-cart">Go to Cart</button>&nbsp;&nbsp;
+                    <button (click)="showDialog = !showDialog; load()" class="btn dialog-close">Close</button>          
+                </app-dialog>
+        </div>
+    </div>
+</div>
+</div>
+<br /><br /><br /><br /><br /><br /><br />
+
+

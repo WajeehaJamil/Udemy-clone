@@ -1,0 +1,36 @@
+.dialog-head{
+    font-size: 15px;
+    color: rgb(22, 92, 54);
+    background-color: rgb(210, 243, 212);
+    padding: 20px 30px;
+  }
+
+.dialog-cart, .dialog-close {
+    background-color: rgb(24, 80, 82);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+.dialog-cart:hover, .dialog-close:hover {
+    background-color: rgb(17, 52, 53);
+}
+.dialog-cart {
+    width: 300px;
+}
+.dialog-close {
+    width: 100px;
+}
+.price-text--medium--2clK9 {
+    font-size: 20px;
+    text-align: center;
+}
+.add-cart{
+    background-color: #853C6C;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.add-cart:hover {
+    background-color: rgb(105, 49, 86);
+}

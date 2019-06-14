@@ -1,0 +1,84 @@
+<app-student-header></app-student-header>
+<app-student-call-to-action></app-student-call-to-action>
+<div class="contanier-fluid">
+  <div class="row">
+    <div id="page-head">
+      <br />
+      <h1>Shopping Cart</h1>
+      <br /><br/>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="isZero(noOfitems)">
+    <br /><br/>
+    <span id="total-courses" data-purpose="cart-list-title">{{noOfitems}} Courses in Cart</span>
+    <div class="row courses-list">      
+        <div class="col-md-4"></div>
+        <div class="col-md-4 " style="text-align: center;" >
+          <div>
+            <br/>
+            <i class="fa fa-shopping-cart" style="color: rgb(218, 218, 218); font-size: 130px"></i>
+            <br />
+            Your cart is empty. Keep shopping to find a course!
+            <br /><br />
+            <button class="btn btn-lg btn-primary" style="width: 200px; margin-left: 90px;" type="button" routerLink="/student">Keep Shopping</button>
+            <br/>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+  </div>
+
+
+<div class="container" *ngIf="!isZero(noOfitems)">
+<div class="row">
+<div class="col-md-8">
+    <br /><br/>
+    <span id="total-courses" data-purpose="cart-list-title">{{noOfitems}} Courses in Cart</span>
+    <ul class="courses-list" >
+      <div class="courses-list-item" *ngFor="let item of items">
+          <li>
+            <div class="item-content">
+              <div class="course-thumbnail">
+                <a href=""><img width="150px" src= "{{item.photo}}"></a>
+              </div>
+              <div class="course-detail">
+                <a href="">
+                  <div class="course-heading">{{item.title}}</div>
+                  <span class="course-author">By {{item.author}}</span>
+                </a>
+                <div>
+                  <a href="">
+                      <div class="course-price">
+                        <div class="price-container" data-purpose="price-text-container">
+                          <div class="course-price-container" data-purpose="course-price-text">
+                            <span>{{item.price}}</span>
+                          </div>
+                        </div>
+                      </div>
+                  </a>
+                </div>
+                <div class="course-options">
+                  <span class="option"><a (click)="remove(item.id); load()">Remove</a></span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <br /><br/>
+    <div class="checkout-pane">
+      <div class="total-price">
+        <span>${{total}}</span>
+      </div>
+      <br/>
+      <div><button class="btn btn-lg btn-primary" type="button" (click)="navigate()">Checkout</button></div>
+    </div>
+  </div>
+</div>
+</div>
+<br/><br/><br/>
+<app-clients></app-clients>
+<app-wajeeha-footer></app-wajeeha-footer>

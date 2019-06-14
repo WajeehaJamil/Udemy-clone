@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="section-header">
+        <br>
+        <span class="section-divider"></span>
+        <h3 class="section-title">Students Are Viewing</h3>
+        <span class="section-divider"></span>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <ngb-carousel *ngIf="images">
+        <div *ngFor="let image of images;">
+            <ng-template ngbSlide>
+                <img [src]="image" alt="Random slide">
+                <div class="carousel-caption">
+                    <h3>Random Course Name</h3>
+                    <p>Random course description.</p>
+                </div>
+            </ng-template>
+        </div>
+    </ngb-carousel>
+</div>
